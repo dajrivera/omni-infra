@@ -31,6 +31,11 @@ data:
     PATCH_PATH="patches"
     CHANGE_FILE="config-changes.sh"
 
+    # get true diff of files (takes rebases into account)
+    # Get previously last applied commit hash using kubectl
+    # COMMIT_HASH=$(kubectl -n argocd get applications omni-dev -o jsonpath='{.status.history[-2].revision}')
+    # MERGE_BASE=$(git merge-base $OMMIT_HASH @^)
+    # CHANGES=git diff --name-status $MERGE_BASE ":(glob)${PATCH_PATH}/**"
     git clone https://github.com/dajrivera/omni-infra.git repo
 
     cd repo/
