@@ -1,12 +1,12 @@
 metadata:
     namespace: default
     type: ConfigPatches.omni.sidero.dev
-    id: 500-c42cc5ec-db5e-42b3-9a73-3ded0cecdf74
+    id: 500-ad80630e-a3cb-4ea4-9bf1-d7336d6519e9
     labels:
-      omni.sidero.dev/machine: 03000200-0400-0500-0006-000700080009
+      omni.sidero.dev/machine: ad80630e-a3cb-4ea4-9bf1-d7336d6519e9
     annotations:
-      description: 03000200-0400-0500-0006-000700080009 system config
-      name: 500-03000200-0400-0500-0006-000700080009-machine-patch
+      description: ad80630e-a3cb-4ea4-9bf1-d7336d6519e9 system config
+      name: 500-ad80630e-a3cb-4ea4-9bf1-d7336d6519e9-machine-patch
 spec:
   data: |-
     machine:
