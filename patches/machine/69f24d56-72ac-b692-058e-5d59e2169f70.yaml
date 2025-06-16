@@ -1,0 +1,37 @@
+metadata:
+    namespace: default
+    type: ConfigPatches.omni.sidero.dev
+    id: 500-69f24d56-72ac-b692-058e-5d59e2169f70
+    labels:
+      omni.sidero.dev/machine: 69f24d56-72ac-b692-058e-5d59e2169f70
+    annotations:
+      description: 69f24d56-72ac-b692-058e-5d59e2169f70 system config
+      name: 500-69f24d56-72ac-b692-058e-5d59e2169f70-machine-patch
+spec:
+  data: |-
+    machine:
+      network:
+        interfaces:
+          - interface: bond0
+            bond:
+              interfaces:
+                - ens192
+              mode: active-backup
+          - interface: br-ext
+            bridge:
+              interfaces:
+                - bond0
+              vlan:
+                vlanFiltering: true
+            dhcp: true                   
+          #- interface: net0
+          #- interface: net1
+          - interface: ceph0
+            addresses:
+              - 10.10.0.1/16
+      sysctls:
+        net/ipv6/conf/bond0/disable_ipv6: "1"
+        net/ipv6/conf/br-ext/disable_ipv6: "1"
+        net/ipv6/conf/net0/disable_ipv6: "1"
+        net/ipv6/conf/net1/disable_ipv6: "1"
+        net/ipv6/conf/ceph0/disable_ipv6: "1"
