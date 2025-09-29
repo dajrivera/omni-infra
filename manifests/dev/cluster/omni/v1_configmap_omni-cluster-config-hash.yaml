@@ -1,6 +1,6 @@
 apiVersion: v1
 data:
-  clusterConfigHash: e3b52441a656a157c3b683ba0badfbda2054bae4
+  clusterConfigHash: 2c72ecb32cc1eaf970f2a89c1c3b335f0dfa7266
   clusterConfigPath: /patches
 kind: ConfigMap
 metadata:
