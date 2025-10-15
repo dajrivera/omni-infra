@@ -10,6 +10,10 @@ metadata:
 spec:
   data: |-
     machine:
+      kubelet:
+        nodeIP:
+          validSubnets:
+            - 192.168.0.0/24
       network:
         interfaces:
           - interface: bond0
