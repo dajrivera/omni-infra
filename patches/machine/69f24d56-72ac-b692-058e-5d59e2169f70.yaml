@@ -21,6 +21,7 @@ spec:
               interfaces:
                 - ens192
               mode: active-backup
+              miimon: 100
           - interface: br-ext
             bridge:
               interfaces:

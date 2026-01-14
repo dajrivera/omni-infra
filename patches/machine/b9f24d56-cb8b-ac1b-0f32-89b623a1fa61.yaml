@@ -5,7 +5,7 @@ metadata:
     labels:
       omni.sidero.dev/machine: b9f24d56-cb8b-ac1b-0f32-89b623a1fa61
     annotations:
-      description: b9f24d56-cb8b-ac1b-0f32-89b623a1fa61 system config
+      description: k8s-dev node config
       name: 500-b9f24d56-cb8b-ac1b-0f32-89b623a1fa61-machine-patch
 spec:
   data: |-
@@ -21,6 +21,7 @@ spec:
               interfaces:
                 - ens192
               mode: active-backup
+              miimon: 100
           - interface: br-ext
             bridge:
               interfaces:
@@ -41,6 +42,6 @@ spec:
       sysctls:
         net/ipv6/conf/bond0/disable_ipv6: "1"
         net/ipv6/conf/br-ext/disable_ipv6: "1"
-        #net/ipv6/conf/net0/disable_ipv6: "1"
-        #net/ipv6/conf/net1/disable_ipv6: "1"
+        net/ipv6/conf/net0/disable_ipv6: "1"
+        net/ipv6/conf/net1/disable_ipv6: "1"
         net/ipv6/conf/ceph0/disable_ipv6: "1"
