@@ -29,7 +29,7 @@ spec:
             secretKeyRef:
               key: omniServiceAccountKey
               name: omni-api-key
-        image: ghcr.io/dajrivera/omnictl:v0.50.0
+        image: ghcr.io/dajrivera/omnictl:v1.4.6@sha256:fd3bf8b4892ad7ecc8e3c05ea2ef9bd159d53729feab048c151a31c8d22d2dc4
         name: omnictl-apply-delete
         securityContext:
           allowPrivilegeEscalation: false
