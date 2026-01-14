@@ -83,7 +83,7 @@ spec:
         fsGroupChangePolicy: "Always"      
       initContainers:
       - name: clone-source-repo
-        image: docker.io/alpine/git:v2.47.2
+        image: docker.io/alpine/git:v2.52.0
         env:
         - name: HOME
           value: /omni
@@ -131,6 +131,7 @@ spec:
           capabilities:
             drop:
               - ALL
+        workingDir: /omni
         command: ["/bin/sh","-c"]
         args:
           - |-

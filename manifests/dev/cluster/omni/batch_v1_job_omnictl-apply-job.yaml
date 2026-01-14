@@ -46,6 +46,7 @@ spec:
         - mountPath: /tmp/apply-changes.sh
           name: omni-scripts
           subPath: apply-changes.sh
+        workingDir: /omni
       initContainers:
       - args:
         - |-
@@ -57,7 +58,7 @@ spec:
         env:
         - name: HOME
           value: /omni
-        image: docker.io/alpine/git:v2.47.2
+        image: docker.io/alpine/git:v2.52.0
         name: clone-source-repo
         securityContext:
           allowPrivilegeEscalation: false
