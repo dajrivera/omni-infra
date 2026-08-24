@@ -33,7 +33,7 @@ spec:
             routes:
               - gateway: 192.168.0.254
                 network: 0.0.0.0/0
-          #- interface: net1
+          ###- interface: net1
           - interface: ceph0
             addresses:
               - 10.10.0.1/16
