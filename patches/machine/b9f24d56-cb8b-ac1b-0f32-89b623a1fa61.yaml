@@ -43,5 +43,8 @@ spec:
         net/ipv6/conf/bond0/disable_ipv6: "1"
         net/ipv6/conf/br-ext/disable_ipv6: "1"
         net/ipv6/conf/net0/disable_ipv6: "1"
+        net/ipv6/conf/net0-port/disable_ipv6: "1"
         net/ipv6/conf/net1/disable_ipv6: "1"
+        net/ipv6/conf/net1-port/disable_ipv6: "1"
         net/ipv6/conf/ceph0/disable_ipv6: "1"
+        net/ipv6/conf/ceph0-port/disable_ipv6: "1"
