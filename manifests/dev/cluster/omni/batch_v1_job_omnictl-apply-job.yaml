@@ -19,6 +19,8 @@ spec:
         - /bin/sh
         - -c
         env:
+        - name: HOME
+          value: /omni
         - name: OMNI_ENDPOINT
           valueFrom:
             secretKeyRef:
